@@ -8,7 +8,7 @@ const  [data, setData ]=useState([])
 
 const getData=async()=>{
   try{
-    const response=await axios.get("http://localhost:5000/api/v1/employee")
+    const response=await axios.get("https://crud-node-express-web.onrender.com/api/v1/employee")
     console.log(response)
     setData(response.data)
   }catch(error)
@@ -18,7 +18,7 @@ const getData=async()=>{
   const handleDelete=async(id)=>{
     try
     {
-      await axios.delete(`http://localhost:5000/api/v1/employee/${id}`)
+      await axios.delete(`https://crud-node-express-web.onrender.com/api/v1/employee/${id}`)
       getData()
     }catch(error){
       console.log(error.message)

@@ -16,7 +16,7 @@ const history=useNavigate()
 const handleUpdate=async(e)=>{
   e.preventDefault()
   try{
-    await axios.put(`http://localhost:5000/api/v1/employee/${id}`,{ename,email,emobile})
+    await axios.put(`https://crud-node-express-web.onrender.com/api/v1/employee/${id}`,{ename,email,emobile})
     history("/")
   }catch(error){
     console.log(error.message);
